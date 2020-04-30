@@ -1,0 +1,10 @@
+spring:
+  datasource:
+#    url: jdbc:mysql://db:3306/quotes?useSSL=false
+    url: jdbc:mysql://localhost:3306/quotes?useSSL=false
+    username: root
+    password: secret123
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  jpa:
+    hibernate:
+      ddl-auto: create-drop
