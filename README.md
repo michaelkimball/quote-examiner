@@ -33,6 +33,26 @@ Open page:
 http://localhost:8080
 ```
 
+Check swagger:
+```bash
+http://localhost:8080/swagger-ui.html
+```
+
+## Table Structure
+
+|  column  |   data type   |
+| -------- | ------------- |
+|   id     | bigint(20) PK |
+| original |    longtext   |
+| stripped |    longtext   |
+|   nouns  |    int(11)    |
+|   verbs  |    int(11)    |
+|  periods |    int(11)    |
+|   you    |    int(11)    |
+|   that   |    int(11)    |
+|   thing  |    int(11)    |
+|   they   |    int(11)    |
+
 ## Contributing
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
 
