@@ -1,5 +1,6 @@
 package dev.michaelkimball.opennlp.controllers;
 
+import dev.michaelkimball.opennlp.models.Paragraph;
 import dev.michaelkimball.opennlp.services.NLPProcessingService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -22,8 +23,8 @@ public class NLPController {
     }
 
     @PostMapping()
-    public ResponseEntity<Void> postExamineParagraph(@RequestBody String paragraph) {
-        nlpProcessingService.processParagraph(paragraph);
+    public ResponseEntity<Void> postExamineParagraph(@RequestBody Paragraph paragraph) {
+        nlpProcessingService.processParagraph(paragraph.getParagraph());
         return ResponseEntity.noContent().build();
     }
 }

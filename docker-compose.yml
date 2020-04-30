@@ -10,3 +10,13 @@ services:
     ports:
       - "3306:3306"
     restart: always
+  app:
+    build: .
+    container_name: open_nlp_app_container
+    image: open_nlp_app:latest
+    volumes:
+      - ./:/etc/app
+    ports:
+      - "8080:8080"
+    depends_on:
+      - db
