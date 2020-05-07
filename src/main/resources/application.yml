@@ -7,7 +7,7 @@ spring:
     hibernate:
       ddl-auto: create-drop
 
-opennlp:
+app:
   bootstrap: true
 
 ---

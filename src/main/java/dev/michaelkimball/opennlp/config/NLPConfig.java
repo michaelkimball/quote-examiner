@@ -13,6 +13,7 @@ import java.io.InputStream;
 
 @Configuration
 public class NLPConfig {
+
     @Bean
     public SentenceDetectorME sentenceDetectorME() throws Exception{
         InputStream is = getClass().getResourceAsStream("/models/en-sent.bin");

@@ -7,6 +7,7 @@ import org.springframework.boot.context.properties.ConfigurationPropertiesScan;
 import org.springframework.context.ConfigurableApplicationContext;
 
 @SpringBootApplication
+@ConfigurationPropertiesScan("dev.michaelkimball.opennlp.config")
 public class OpennlpApplication {
 
     public static void main(String[] args) {

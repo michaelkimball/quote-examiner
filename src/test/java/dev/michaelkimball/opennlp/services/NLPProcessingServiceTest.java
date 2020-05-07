@@ -1,17 +1,12 @@
 package dev.michaelkimball.opennlp.services;
 
+import dev.michaelkimball.opennlp.config.AppConfig;
 import dev.michaelkimball.opennlp.config.NLPConfig;
-import dev.michaelkimball.opennlp.models.ExaminedQuote;
 import dev.michaelkimball.opennlp.repositories.MockExaminedQuoteRepository;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 
-import java.util.Arrays;
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
-import java.util.stream.Collectors;
-import java.util.stream.IntStream;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
@@ -23,7 +18,7 @@ public class NLPProcessingServiceTest {
     static void beforeAll() throws Exception{
         NLPConfig nlpConfig = new NLPConfig();
         nlpProcessingService = new NLPProcessingService(nlpConfig.sentenceDetectorME(),
-                nlpConfig.tokenizerME(), nlpConfig.posTaggerME(), new MockExaminedQuoteRepository());
+                nlpConfig.tokenizerME(), nlpConfig.posTaggerME(), new MockExaminedQuoteRepository(), new AppConfig(false));
     }
 
     @Test
