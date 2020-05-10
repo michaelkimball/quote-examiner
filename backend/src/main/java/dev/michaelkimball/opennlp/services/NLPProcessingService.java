@@ -24,7 +24,7 @@ public class NLPProcessingService {
     private static final String THAT = "that";
     private static final String THING = "thing";
     private static final String THEY = "they";
-    private static final String PERIOD = "period";
+    private static final String PERIOD = ".";
     private static final String PROPER_NOUN = "NNP";
     private static final String NOUN = "NN";
     private static final String VERB_BASE = "VB";
