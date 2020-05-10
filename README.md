@@ -4,10 +4,11 @@ Quote-Examiner is a Spring Boot application that parses a block of text and save
 
 ## Running
 
-To run this application
+To run this application:
 
 ```bash
-./mvnw spring-boot:run
+./mvnw clean install
+java -jar backend/target/backend-0.0.1-SNAPSHOT.jar
 ```
 
 To run MySQL using docker:
@@ -25,6 +26,19 @@ To run app using docker if using Windows:
 2. Then open Docker Desktop Settings->File Sharing and enable the drive that you have cloned the repo to.
 3. Restart Docker Desktop
 4. `docker-compose up`
+
+To run this app in development mode:
+```bash
+backend
+**********
+./mvnw -f backend/pom.xml spring-boot:run
+
+frontend
+**********
+cd frontend
+npm install
+npm run start
+```
 
 ## Usage
 
