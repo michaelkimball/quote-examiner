@@ -39,6 +39,7 @@ cd frontend
 npm install
 npm run start
 ```
+Note that in development mode the frontend runs at `http://localhost:8081` by default.
 
 ## Usage
 
