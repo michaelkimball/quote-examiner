@@ -3,15 +3,13 @@
     <form class="new-quote-form" v-on:submit.prevent="onFormSubmit">
       <div class="quote-input-control">
         <label for="quoteTextarea">New Quote</label>
-        <div class="quoteTextOutline">
-          <textarea
-            v-model="newQuote"
-            id="quoteTextarea"
-            name="quoteTextarea"
-            rows="3"
-            placeholder="To be or not to be..."
-          ></textarea>
-        </div>
+        <textarea
+          v-model="newQuote"
+          id="quoteTextarea"
+          name="quoteTextarea"
+          rows="3"
+          placeholder="To be or not to be..."
+        ></textarea>
       </div>
       <div class="quote-submit">
         <button type="submit" class="quote-submit-button">Add</button>
@@ -55,19 +53,20 @@ label
   justify-content center
 .quote-input-control
   display flex
+  flex-direction column
   flex-wrap wrap
-.quoteTextOutline
-  border 1px solid black
-  border-radius 10rem
-  padding 2em
+  flex-basis 400px
+.new-quote-form
+  flex-direction column
 #quoteTextarea
   outline: 0;
   box-shadow: none;
   border: none;
+  border-bottom 2px solid #009999
   border-radius: 0;
   box-sizing: border-box;
   background-color: transparent;
-  flex-basis 400px
+  margin-bottom .5em
   padding: 1.5rem 0;
 .quote-submit
   display flex
