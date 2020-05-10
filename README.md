@@ -1,6 +1,6 @@
 # Quote-Examiner
 
-Quote-Examiner is a Spring Boot application that parses a block of text and saves some metadata from it. It uses MySQL, Thymeleaf, Bootstrap, Vue.js, Spring Data REST and Apache OpenNLP.
+Quote-Examiner is a Spring Boot application that parses a block of text and saves some metadata from it. It uses MySQL, Vue.js (Vuex, Jest & Typescript), Spring Data REST and Apache OpenNLP.
 
 ## Running
 
