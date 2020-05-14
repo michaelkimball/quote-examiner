@@ -10,7 +10,7 @@ To run this application:
 
 ```bash
 ./mvnw clean install
-java -jar backend/target/backend-0.0.1-SNAPSHOT.jar
+java -jar backend/target/backend-0.0.1-SNAPSHOT.war
 ```
 
 To run MySQL using docker:

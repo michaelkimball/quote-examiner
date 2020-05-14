@@ -9,4 +9,4 @@ COPY frontend/public ./frontend/public
 COPY frontend/src ./frontend/src
 COPY frontend/tests ./frontend/tests
 RUN ./mvnw package
-ENTRYPOINT ["java", "-jar",  "backend/target/backend-0.0.1-SNAPSHOT.jar", "--spring.profiles.active=containerized"]
+ENTRYPOINT ["java", "-jar",  "backend/target/backend-0.0.1-SNAPSHOT.war", "--spring.profiles.active=containerized"]
