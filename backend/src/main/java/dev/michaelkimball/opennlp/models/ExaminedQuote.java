@@ -10,7 +10,7 @@ import javax.persistence.*;
 @AllArgsConstructor
 public class ExaminedQuote {
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
     @With
     @Lob

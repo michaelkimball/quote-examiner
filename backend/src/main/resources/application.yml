@@ -1,23 +1,7 @@
 spring:
-  datasource:
-    username: root
-    password: secret123
-    driver-class-name: com.mysql.cj.jdbc.Driver
+  profiles:
+    active: dev
   jpa:
     hibernate:
       ddl-auto: create-drop
-
-app:
-  bootstrap: true
-
----
-spring:
-  profiles: default
-  datasource:
-    url: jdbc:mysql://localhost:3306/quotes?useSSL=false
-
----
-spring:
-  profiles: containerized
-  datasource:
-    url: jdbc:mysql://db:3306/quotes?useSSL=false
+    database: mysql

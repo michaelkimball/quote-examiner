@@ -70,6 +70,16 @@ http://localhost:8080/swagger-ui.html
 |   thing  |    int(11)    |
 |   they   |    int(11)    |
 
+## Deploying to GCP
+Create GCP Project
+Create GCP Cloud SQL Instance
+Create quotes DB on Cloud SQL
+Update `backend/src/main/resources/application-gcp.yml` spring.cloud.gcp.project-id to GCP AppEngine project id and spring.cloud.gcp.sql.instance-connection-name to GCP Cloud SQL instance connection name
+```bash
+./mvnw clean install
+./mvnw -f backend/pom.xml clean package appengine:deploy -P cloud-gcp
+```
+
 ## Contributing
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
 

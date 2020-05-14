@@ -1,0 +1,12 @@
+spring:
+  cloud:
+    gcp:
+      project-id: [google cloud project appengine id]
+      sql:
+        instance-connection-name: [google cloud sql instance connection name]
+        database-name: quotes
+  datasource:
+    initialization-mode: always
+  jpa:
+    database-platform: org.hibernate.dialect.MySQL57Dialect
+    show-sql: true
