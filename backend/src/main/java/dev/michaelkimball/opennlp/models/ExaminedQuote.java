@@ -1,13 +1,15 @@
 package dev.michaelkimball.opennlp.models;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
 import lombok.*;
 
 import javax.persistence.*;
 
-@Data
-@Entity
+@Getter
+@Setter
 @NoArgsConstructor
 @AllArgsConstructor
+@Entity
 public class ExaminedQuote {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -32,4 +34,9 @@ public class ExaminedQuote {
     private int thing;
     @With
     private int they;
+    @ManyToOne(fetch = FetchType.LAZY, optional = false)
+    @JoinColumn(name="user_id", nullable=false)
+    @JsonBackReference
+    @With
+    private User user;
 }

@@ -5,7 +5,11 @@ import dev.michaelkimball.opennlp.services.NLPProcessingService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.core.Authentication;
 import org.springframework.web.bind.annotation.*;
+
+import java.security.Principal;
+import java.util.Map;
 
 @Slf4j
 @RestController
@@ -20,8 +24,8 @@ public class NLPController {
     }
 
     @PostMapping()
-    public ResponseEntity<Void> postExamineParagraph(@RequestBody Paragraph paragraph) {
-        nlpProcessingService.processParagraph(paragraph.getParagraph());
+    public ResponseEntity<Void> postExamineParagraph(@RequestBody Paragraph paragraph, Principal principal) {
+        nlpProcessingService.processParagraph(paragraph.getParagraph(), principal.getName());
         return ResponseEntity.noContent().build();
     }
 

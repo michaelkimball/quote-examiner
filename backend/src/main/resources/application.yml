@@ -5,3 +5,13 @@ spring:
     hibernate:
       ddl-auto: create-drop
     database: mysql
+  security:
+    oauth2:
+      client:
+        registration:
+          github:
+            clientId: [github client id]
+            clientSecret: [github client secret]
+          google:
+            client-id: [google client id]
+            client-secret: [google client secret]

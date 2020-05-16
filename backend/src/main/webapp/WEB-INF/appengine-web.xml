@@ -3,6 +3,7 @@
     <threadsafe>true</threadsafe>
     <runtime>java8</runtime>
     <system-properties>
-        <property name="spring.profiles.active" value="gcp" />
+        <property name="spring.profiles.active" value="gcp,deploy" />
     </system-properties>
+    <sessions-enabled>true</sessions-enabled>
 </appengine-web-app>

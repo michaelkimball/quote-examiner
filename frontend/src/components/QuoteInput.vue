@@ -25,15 +25,15 @@ import { Component, Vue } from "vue-property-decorator";
 export default class QuoteInput extends Vue {
   newQuote = "";
   onFormSubmit() {
+    const headers = {
+      "X-XSRF-TOKEN": this.$cookies.get("XSRF-TOKEN")
+    };
     this.$http
-      .post("/nlp", { paragraph: this.newQuote })
+      .post("/nlp", { paragraph: this.newQuote }, { headers })
       .then(() => this.$http.get("/examinedQuotes"))
       .then(
-        response => {
-          this.$store.dispatch(
-            "loadQuotes",
-            response.data._embedded.examinedQuotes
-          );
+        (response: any) => {
+          this.$store.dispatch("loadQuotes", response.body);
           this.newQuote = "";
         },
         error => console.error(error)
