@@ -57,6 +57,7 @@ http://localhost:8080/swagger-ui.html
 
 ## Table Structure
 
+### quotes
 |  column  |   data type   |
 | -------- | ------------- |
 |   id     | bigint(20) PK |
@@ -69,6 +70,14 @@ http://localhost:8080/swagger-ui.html
 |   that   |    int(11)    |
 |   thing  |    int(11)    |
 |   they   |    int(11)    |
+|  user_id |  varchar(255) |
+
+### user
+|  column  |    data type    |
+| -------- | --------------- |
+|   id     | varchar(255) PK |
+|   name   |   varchar(255)  |
+
 
 ## Deploying to GCP
 Create GCP Project
